@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:columnCount="2"
+        android:orientation="horizontal"
+        android:rowCount="1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_column="0"
+            android:orientation="vertical"
+            android:layout_gravity="fill_horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="@string/fragment_perfil_usuario_nombre" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fragment_perfil_usuario_apellidos" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fragment_perfil_usuario_fecha_nacimiento" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fragment_perfil_usuario_domicilio" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_column="1"
+            android:orientation="vertical"
+            android:layout_gravity="fill_horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NOMBRE_CLIENTE"
+                android:id="@+id/fragment_perfil_usuario_nombreCliente"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="APELLIDOS_CLIENTE"
+                android:id="@+id/fragment_perfil_usuario_apellidosCliente"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FECHA_NACIMIENTO_CLIENTE"
+                android:id="@+id/fragment_perfil_usuario_fechaNacimientoCliente"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DOMICILIO_CLIENTE"
+                android:id="@+id/fragment_perfil_usuario_domicilioCliente"/>
+
+        </LinearLayout>
+
+
+    </GridLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_perfil_usuario_cambio_clave"
+            android:id="@+id/fragment_perfil_usuario_btnCambioClave"/>
+    </LinearLayout>
+
+</LinearLayout>
