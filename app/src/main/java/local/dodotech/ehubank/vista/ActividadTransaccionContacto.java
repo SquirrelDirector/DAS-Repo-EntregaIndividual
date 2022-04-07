@@ -80,7 +80,7 @@ public class ActividadTransaccionContacto extends AppCompatActivity {
      * Evento que se dispara cuando se pulsa el botón de "Transferencia bancaria interna"
      * Inicia la actividad de transferencia interna
      */
-    protected void evtRealizarTransaccionContacto(View v){
+    public void evtRealizarTransaccionContacto(View v){
         EditText txtCantidad = findViewById(R.id.realizar_transaccion_contacto_txtCantidad);
         EditText txtConcepto = findViewById(R.id.realizar_transaccion_contacto_txtConcepto);
 

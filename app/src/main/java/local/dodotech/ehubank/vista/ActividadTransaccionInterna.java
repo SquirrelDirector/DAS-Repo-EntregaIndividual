@@ -74,7 +74,7 @@ public class ActividadTransaccionInterna extends AppCompatActivity {
      * Evento que se dispara cuando se pulsa el botón de "Transferencia bancaria interna"
      * Inicia la actividad de transferencia interna
      */
-    protected void evtRealizarTransaccionInterna(View v){
+    public void evtRealizarTransaccionInterna(View v){
         EditText txtCantidad = (EditText) findViewById(R.id.realizar_transaccion_interna_txtCantidad);
         String cantidad = txtCantidad.getText().toString();
         boolean transferenciaCompleta = ControladorCuentaBancaria.getControladorCuentaBancaria().realizarTransferencia(cuentaOrigen, cuentaDestino, Float.parseFloat(cantidad), "Transferencia interna");//TODO Considerar ponerlo como recurso

@@ -30,7 +30,7 @@ public class Actividad_Nuevo extends AppCompatActivity {
      * Evento que se dispara cuando se pulsa el botón de "Transferencia bancaria interna"
      * Inicia la actividad de transferencia interna
      */
-    protected void evtBtnTransferInterna(View v){
+    public void evtBtnTransferInterna(View v){
         List<CuentaBancaria> cuentas = ControladorCuentaBancaria.getControladorCuentaBancaria().getCuentasBancarias(ControladorCuentasUsuario.getControladorCuentasUsuario().getIdentificador());
         if(cuentas.size()>=2){
             Intent tInterna = new Intent(this, ActividadTransaccionInterna.class);
@@ -46,7 +46,7 @@ public class Actividad_Nuevo extends AppCompatActivity {
      * Evento que se dispara cuando se pulsa el botón de "Envío a contacto"
      * Inicia la actividad de transferencia a contacto
      */
-    protected void evtBtnTransferContacto(View v){
+    public void evtBtnTransferContacto(View v){
         List<CuentaBancaria> cuentas = ControladorCuentaBancaria.getControladorCuentaBancaria().getCuentasBancarias(ControladorCuentasUsuario.getControladorCuentasUsuario().getIdentificador());
         if(cuentas.size()>=1){
             Intent tTransferContacto = new Intent(this, ActividadTransaccionContacto.class);
@@ -62,7 +62,7 @@ public class Actividad_Nuevo extends AppCompatActivity {
      * Evento que se dispara cuando se pulsa el botón de "Transferencia bancaria externa"
      * Inicia la actividad de transferencia externa
      */
-    protected void evtTransferExterna(View v){
+    public void evtTransferExterna(View v){
         List<CuentaBancaria> cuentas = ControladorCuentaBancaria.getControladorCuentaBancaria().getCuentasBancarias(ControladorCuentasUsuario.getControladorCuentasUsuario().getIdentificador());
         if(cuentas.size()>=1) {
             Intent tTransferExterna = new Intent(this, ActividadTransaccionExterna.class);
@@ -78,7 +78,7 @@ public class Actividad_Nuevo extends AppCompatActivity {
      * Evento que se dispara cuando se pulsa el botón de "Cuenta bancaria"
      * Inicia la actividad de creación de cuentas bancarias
      */
-    protected void evtNuevaCuentaBancaria(View v){
+    public void evtNuevaCuentaBancaria(View v){
         //Código tomado de https://stackoverflow.com/questions/10903754/input-text-dialog-android
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Crear nueva cuenta bancaria");

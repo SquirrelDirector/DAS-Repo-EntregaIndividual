@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Evento que se dispara cuando se pulsa el botón de registrarse
      */
-    protected void evtRegistrarse(View v){
+    public void evtRegistrarse(View v){
         Log.d("MAIN", "Evento de registro activado");
         EditText ident = (EditText)findViewById(R.id.registrarse_txtIdentificador);
         EditText clave = (EditText)findViewById(R.id.registrarse_txtClave);
@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Evento que se dispara cuando se pulsa el botón de Iniciar Sesión
      */
-    protected void evtIniciarSesion(View v){
+    public void evtIniciarSesion(View v){
         Log.d("MAIN", "Evento de inicio de sesión activado");
         EditText ident = (EditText)findViewById(R.id.iniciar_sesion_identificador);
         EditText clave = (EditText) findViewById(R.id.iniciar_sesion_clave);
@@ -172,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    protected void evtAbrirIURegistro(View v){
+    public void evtAbrirIURegistro(View v){
         Intent i = new Intent(getContext(), ActividadRegistro.class);
         startActivity(i);
         finish();
