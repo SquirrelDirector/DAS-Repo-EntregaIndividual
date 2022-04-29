@@ -36,4 +36,6 @@ $resultado= curl_exec( $ch );
 #cerrar el handler de curl
 curl_close( $ch );
 
+echo $resultado;
+
 ?>
