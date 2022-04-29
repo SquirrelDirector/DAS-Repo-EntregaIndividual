@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Formulario</title>
+	</head>
+	<body>
+		<h1>Formulario de envío de datos</h1>
+		<form action="mensajeria.php" method="POST" enctype="multipart/form-data">
+			<label for="cuenta_origen">Cuenta de origen: </label>
+			<input id="cuenta_origen" type="text" name="cuenta_origen" value="ES50123554620521"/><br/>
+			<label for="cuenta_destino">Cuenta de destino: </label>
+			<input id="cuenta_destino" type="text" name="cuenta_destino" placeholder="ES79950896150922"/><br/>
+			<label for="identificador">Identificador del usuario: </label>
+			<input type="text" id="identificador" name="identificador"/><br/>
+			<label for="cantidad">Cantidad (en euros): </label>
+			<input type="text" id="cantidad" name="cantidad" placeholder="25.2"/><br/>
+			<label for="concepto">Concepto: </label>
+			<input type="text" name="concepto" placeholder="Concepto"/>
+			<input type="submit" value="Enviar"/>
+		</form>
+	</body>
+</html>

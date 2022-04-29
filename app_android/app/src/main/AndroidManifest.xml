@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="local.dodotech.ehubank">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <!--Firebase Cloud Messaging-->
+        <service android:name=".PuntoMensajeria">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".widget.WidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"></service>
+
+        <activity android:name=".vista.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".vista.ActividadPantallaPrincipal"
+            android:label="@string/title_activity_pagina_principal"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".vista.Actividad_Nuevo"
+            android:label="Nuevo..." />
+        <activity
+            android:name=".vista.ActividadPreferencias"
+            android:label="Configuración" />
+        <activity
+            android:name=".vista.ActividadTransaccionExterna"
+            android:label="Nueva transacción" />
+        <activity
+            android:name=".vista.ActividadTransaccionInterna"
+            android:label="Nueva transacción" />
+        <activity
+            android:name=".vista.ActividadTransaccionContacto"
+            android:label="Nueva transacción" />
+        <activity
+            android:name=".vista.ActividadRegistro"
+            android:label="Registrarse" />
+        <activity
+            android:name=".vista.ActividadVerTransaccionesCuenta"
+            android:label="Ver transacciones" />
+        <!--
+        <activity
+            android:name=".vista.MainActivity"
+            android:label="@string/title_activity_actividad_pantalla_principal" />
+        <activity android:name=".vista.Actividad_Nuevo"></activity>
+        -->
+
+
+        <!-- Este es el provider, para habilitar la función de cámara, se subirá una foto de perfil al servidor -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="local.dodotech.ehubank.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/config_camara" />
+        </provider>
+
+        <!-- Widget Android-->
+        <receiver android:name=".Widget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="local.dodotech.ehubank.ACTUALIZAR_WIDGET" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
+        <receiver android:name=".AlarmManagerBroadcastReceiver"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_margin="4dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/item_transaccion_fecha_widget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha" />
+
+                <TextView
+                    android:id="@+id/item_transaccion_concepto_widget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ZARA" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0">
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/item_transaccion_cantidad_widget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    android:text="25,7€" />
+            </LinearLayout>-->
+        </LinearLayout>
